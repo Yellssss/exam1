@@ -38,8 +38,8 @@ class employeecontroller extends Controller
 
     public function edit( int $id)
     {
-        $employees = ::find($id);
-        return view ('employee.edit');
+        $employees = employee::find($id);
+        return view ('employee.edit', compact('employees'));
     }
 
     public function update(Request $request, int $id) {
